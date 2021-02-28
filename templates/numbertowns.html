@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content >
+    <title></title>
+ </head>
+ <body>
+ <a href="http://127.0.0.1:8000/">Посик по идентификатору</a>
+  <br>
+ <a href="http://127.0.0.1:8000/twotowns">Поиск по двум городам</a>
+ <br>
+ <a href="http://127.0.0.1:8000/numbertown">Вывод заданного кол-ва городов</a>
+  <br>
+    <form action="/numbertown" method="get">
+     <br>
+        <input type="text" name='number' placeholder= "введите кол-во городов" value={{request.args.get('number', '')}}>
+        <input type='submit'>
+        
+    </form>
+    {% for i in l %}
+        <h4>{{i}}</h4>
+    {% endfor %}
+       
+ </body>
+</html>

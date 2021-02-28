@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Поиск</title>
+ </head>
+
+ <body>
+ <a href="http://127.0.0.1:8000/">Посик по идентификатору</a>
+  <br>
+ <a href="http://127.0.0.1:8000/twotowns">Поиск по двум городам</a>
+  <br>
+  <a href="http://127.0.0.1:8000/numbertown">Вывод заданного кол-ва городов</a>
+  <br>
+  <form action = "/twotowns" method = 'get'>
+  <br>
+    <input type="search" name='name1' placeholder="Название города 1" value="{{request.args.get('name1', '')}}">
+    <input type="search" name='name2' placeholder="Название города 2" value="{{request.args.get('name2', '')}}">
+    <input type="submit" value="Найти">
+  </form>
+    {% for i in m %}
+        <h4>{{i}}</h4>
+    {% endfor %}
+ </body>
+</html>
